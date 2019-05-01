@@ -22,14 +22,14 @@ export default class NumberButtons extends Component {
 
     render() {
         return (
-            <View style={styles.container}> {
-                this.props.buttons.map((row, index) => (
-                    <View key={index} style={styles.contRow}> { 
-                        row.map((col,index) => (
+            <View style={styles.container}> 
+                {this.props.buttons.map((row, index) => (
+                    <View key={index} style={styles.contRow}> 
+                        {row.map((col,index) => (
                             <TouchableNativeFeedback
                                 key={index}
-                                onPress={() => this._handleOnPress(col)}
-                                background={TouchableNativeFeedback.SelectableBackground()}>
+                                onPress={() => this._handleOnPress(col)}>
+                                {/* background={TouchableNativeFeedback.SelectableBackground()} */}
                                 <View style={styles.contButton}>
                                     <Text style={styles.txtDefault}>{col}</Text>
                                 </View>
